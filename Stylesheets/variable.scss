@@ -1,0 +1,209 @@
+$font-family:cursive;
+td{
+  font-size: 15px;
+  font-family: $font-family;
+}
+th{
+  font-size: 20px;
+  font-family: $font-family;
+}
+
+/* Nesting SCSS Property */
+section {
+	h2 {
+		background-color: rgb(45, 90, 129);
+	}
+}
+
+footer 
+{
+  p {
+  font-size: 1.5rem;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
+  }
+}
+
+/* Simple CSS property */
+* {
+  box-sizing: border-box;
+}
+
+
+
+/* #id selector */
+#home {
+	text-align: center;
+	margin-top: 40px;
+}
+
+
+#me {
+	margin: 0px auto;
+	margin-bottom: 50px;
+  height:200px;
+  width: 200px
+}
+
+#leftContent {
+  background-color: #6b73dd;
+  
+}
+
+#rightContent {
+  background-color: #94a8bf;
+}
+
+/* Multi-selector */
+header, footer {
+  background-color: #384053;
+  color: #94a8bf;
+  padding: 0.5rem 0;
+}
+
+h1, h2 {
+  font-family: 'Merriweather', serif;
+  font-style: oblique;
+  font-variant: small-caps;
+  border-bottom: medium solid;
+  padding-left: 0.5rem;
+}
+
+/* Normal selector */
+body {
+  color: #384053;
+  background-color: #9f767a;
+  font-family: 'Lato', sans-serif;
+}
+
+p {
+  margin: 0;
+  padding: inherit;
+}
+
+
+main {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #94a8bf;
+  padding-bottom: 1rem;
+}
+
+section {
+  padding: 0 0.5rem;
+}
+
+
+header h1 {
+  text-align: center;
+  text-shadow: 2px 2px 2px #8f767a;
+  border-bottom: thin solid;
+  width: 80%;
+  margin: 0 auto;
+}
+
+h2 {
+  margin: 1rem 0 0.5rem 0;
+}
+
+img {
+  width: 50%;
+  height: 50%;
+  border: 1px solid;
+
+}
+
+ul {
+  list-style: none;
+  padding: inherit;
+  line-height: 1.5rem;
+  margin: 0;
+}
+
+a:link {
+  color: #7d2e68;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #84616a;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 	.class selector  */
+
+.container{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
+}
+
+ /* Extend/Inheritance SCSS Property 
+	https://sass-lang.com/guide#topic-7
+*/
+
+%message-shared {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: #333;
+  }
+ 
+  .success {
+    @extend %message-shared;
+    border-color: green;
+    text-align: center;
+  }
+  
+  .error {
+    @extend %message-shared;
+    border-color: red;
+    text-align: center;
+  }
+  
+  .warning {
+    @extend %message-shared;
+    border-color: yellow;
+    text-align: center;
+  }
+  
+  .images {
+    height: auto;
+    cursor: pointer;
+    transition: all 0.5s;
+    margin: 20px;
+  }
+  
+  
+  .images:hover {
+    -ms-transform: scale(1.2,1.2);/*IE 9*/
+    -webkit-transform: scale(2,2);/*Safari*/
+    transform: scale(1.2,1.2);
+  }
+  
+  /*Responsive*/
+  @media only screen and (min-width: 992px) {
+    .gallery .images {
+      width: 25%;
+    }
+  }
+  @media only screen and (max-width: 992px) {
+    .gallery .images{
+      width: 25%;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .gallery .images {
+      width: 37%;
+    }
+  }  
+
+
